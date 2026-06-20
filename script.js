@@ -44,9 +44,8 @@ searchForm.addEventListener('submit', function(e) {
             if (student) {
                 showStudentResult(student);
             } else {
-                showError("رقم الجلوس غير موجود! تأكد من الرقم (أو جرب الأرقام المتاحة في الملف).");
-            }
-        })
+                showError("رقم الجلوس غير موجود! تأكد من الرقم.")}
+            })
         .catch(err => {
             showError("حدث خطأ في النظام؛ يرجى التأكد من تشغيل المشروع عبر سيرفر محلي (Live Server).");
         });
