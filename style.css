@@ -1,0 +1,252 @@
+/* إعدادات الخطوط والألوان العامة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* الهيدر */
+.main-header {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-header p {
+    color: #bfdbfe;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* صندوق البحث */
+.search-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 450px;
+    margin: 0 auto 2rem auto;
+}
+
+.search-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #334155;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.input-group input {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-search {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-search:hover {
+    background-color: #1d4ed8;
+}
+
+/* رسائل الخطأ */
+.error-message {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* التنسيقات المخفية */
+.hidden {
+    display: none !important;
+}
+
+/* أزرار التحكم بالشهادة */
+.actions-bar {
+    margin-bottom: 1rem;
+}
+
+.btn-download {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-download:hover {
+    background-color: #15803d;
+}
+
+/* قالب الشهادة الفخم */
+.certificate-box {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-box::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    height: 6px;
+    background: linear-gradient(to left, #2563eb, #4f46e5);
+}
+
+.certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-b: 2px solid #f1f5f9;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.certificate-header h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+}
+
+.certificate-header p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.sitting-badge {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+}
+
+/* جدول النتائج */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-table th {
+    background-color: #f8fafc;
+    color: #475569;
+    padding: 0.75rem;
+    font-weight: 700;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.results-table td {
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+    font-weight: 500;
+}
+
+/* تقديرات المواد بالألوان */
+.excellent { color: #16a34a; font-weight: bold; }
+.very-good { color: #2563eb; font-weight: bold; }
+.good { color: #ca8a04; font-weight: bold; }
+.fail { color: #dc2626; font-weight: 900; }
+
+/* صندوق المجموع الفخم */
+.total-box {
+    background-color: #0f172a;
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.total-item span {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.total-item strong {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.text-green {
+    color: #4ade80;
+}
+
+.certificate-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}

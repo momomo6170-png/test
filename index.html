@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة استعلام النتائج الإلكترونية</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>المنصة الإلكترونية لإعلان نتائج الامتحانات</h1>
+        <p>مدرسة التميز الثانوية</p>
+    </header>
+
+    <main class="container">
+        <div class="search-card">
+            <h2>الاستعلام عن نتيجة الطالب</h2>
+            <form id="searchForm">
+                <div class="input-group">
+                    <label for="sittingNumber">أدخل رقم الجلوس</label>
+                    <input type="text" id="sittingNumber" placeholder="" required>
+                </div>
+                <button type="submit" class="btn-search">بحث عن النتيجة</button>
+            </form>
+            <div id="errorMessage" class="error-message hidden"></div>
+        </div>
+
+        <div id="resultSection" class="result-section hidden">
+            <div class="actions-bar">
+                <button id="downloadPdfBtn" class="btn-download">📥 تحميل الشهادة بملف PDF</button>
+            </div>
+
+            <div id="certificate" class="certificate-box">
+                <div class="certificate-header">
+                    <div>
+                        <h3 id="studentName">اسم الطالب</h3>
+                        <p id="studentGrade">الصف الدراسي</p>
+                    </div>
+                    <div class="sitting-badge">
+                        رقم الجلوس: <span id="certSittingNumber">0000</span>
+                    </div>
+                </div>
+
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>المادة الدراسية</th>
+                            <th>الدرجة العظمى</th>
+                            <th>درجة الطالب</th>
+                            <th>التقدير</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subjectsTableBody">
+                        </tbody>
+                </table>
+
+                <div class="total-box">
+                    <div class="total-item">
+                        <span>المجموع الكلي</span>
+                        <strong id="totalScore">0 / 0</strong>
+                    </div>
+                    <div class="total-item">
+                        <span>النسبة المئوية</span>
+                        <strong id="percentage" class="text-green">0%</strong>
+                    </div>
+                </div>
+
+                <div class="certificate-footer">
+                    <p>* هذه نتيجة استرشادية مستخرجة إلكترونياً ولا تعتبر وثيقة رسمية وحيدة.</p>
+                    <p>تاريخ الاستخراج: <span id="currentDate"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
